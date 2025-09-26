@@ -10,7 +10,7 @@ export interface IProduct extends Document {
   inventory: number;
   images: string[];
   features: {
-    [key: string]: any;
+    [key: string]: string | number | boolean;
   };
   ratings: {
     average: number;

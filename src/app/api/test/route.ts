@@ -1,14 +1,14 @@
 // api/test/route.ts
 
 import '@/lib/db';
-import { Product } from '@/models/Product';
+import { Product } from '@/models/product';
 
 export async function GET() {
     try {
         const results = await Product.find()
        return Response.json(results)
     } catch (error) {
-        console.log('oops, mongo bad');
+        console.log(error);
         return new Response('error', {status: 500})
     }
 }

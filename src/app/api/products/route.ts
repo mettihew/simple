@@ -4,7 +4,7 @@
 import '@/lib/db';
 
 
-import { Product } from '@/models/Product';
+import { Product } from '@/models/product';
 import { NextResponse } from 'next/server';
 
 export async function GET() {
@@ -12,7 +12,7 @@ export async function GET() {
         const results = await Product.find()
        return NextResponse.json(results)
     } catch (error) {
-        console.log('oops, mongo bad');
+        console.log(error);
     return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
     }
 }

@@ -5,6 +5,7 @@ export default function Header(){
         <div className="flex justify-around">
             <Link href="/">Home</Link>
             <Link href="/products">Products</Link>
+            <Link href="/cart">Cart</Link>
             <Link href="/test">Test</Link>
         </div>
     )

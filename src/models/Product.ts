@@ -1,5 +1,5 @@
 // src/models/Product.ts
-import mongoose, { Schema, Document, Model } from 'mongoose';
+import mongoose, { Schema, Document } from 'mongoose';
 
 export interface IProduct extends Document {
   name: string;
@@ -27,4 +27,4 @@ const ProductSchema: Schema = new Schema({
 ProductSchema.index({ price: 1 });
 ProductSchema.index({ name: 'text' });
 
-export const Product: Model<IProduct> = mongoose.models.Product || mongoose.model<IProduct>('Product', ProductSchema);
+export default mongoose.models.Product || mongoose.model<IProduct>('Product', ProductSchema);

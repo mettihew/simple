@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+
 interface Product {
   id: string;
   name: string;
@@ -25,7 +26,9 @@ async function getProduct(id: string): Promise<Product | null> {
 }
 
 export default async function ProductPage({ params }: { params: { id: string } }) {
+  // const { id } = await params; // Await first! if you get error
   const product = await getProduct(params.id);
+
 
   if (!product) {
     return <div>Product not found</div>;

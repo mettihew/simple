@@ -4,7 +4,7 @@
 import '@/lib/db';
 
 
-import { Product } from '@/models/product';
+import  Product  from '@/models/Product';
 import { NextResponse } from 'next/server';
 
 export async function GET() {
